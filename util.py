@@ -1,3 +1,5 @@
+#Credits to ComputerVisionEngineer for most of this file!
+
 import base64
 import streamlit as st
 from PIL import ImageOps, Image
@@ -31,7 +33,7 @@ def classify(image, model, class_names):
 
     # make prediction
     prediction = model.predict(data)
-    index = np.argmax(prediction)  # Changed this line
+    index = np.argmax(prediction) 
     class_name = class_names[index]
     confidence_score = prediction[0][index]
 
